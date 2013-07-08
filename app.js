@@ -32,6 +32,9 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+var sky = require('./ctrlers/sky');
+sky.fetch()
+
 app.get('/', require('./routes/index'));
 app.get('/signin', require('./routes/sign').signin);
 app.get('/signout', require('./routes/sign').signout);
