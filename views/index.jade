@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  - if (!user)
+    div.signin 
+        a(href="https://api.weibo.com/oauth2/authorize?client_id=#{weibo.key}&response_type=code&redirect_uri=#{weibo.redirect}") 登录
+  - else 
+    div.welcome
+        h2 欢迎你#{user.uid}
+        a(href="/api/sky?count=100&page=1") 抓取最新的天空

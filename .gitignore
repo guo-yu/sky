@@ -1,0 +1,4 @@
+node_*
+*.sublime*
+*.DS*
+config.js
